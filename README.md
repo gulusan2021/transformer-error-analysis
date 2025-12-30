@@ -81,12 +81,12 @@ Predicted: Positive
 - pandas
 - matplotlib
 
+## License
 
+MIT License
 
 ## Contact
 
 Gulusan Erdogan-Ozgul
 Email: e.gulusan@gmail.com
 Website: https://gulusan2021.github.io/gulusan-website/
-
-

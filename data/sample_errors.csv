@@ -1,0 +1,6 @@
+text,true_label,predicted_label,error_type,notes
+"This film is not without its flaws but overall excellent",positive,negative,negation,Model focuses on negation and misses positive conclusion
+"Oh wonderful another masterpiece",negative,positive,sarcasm,Misses sarcastic tone and interprets literally
+"Great acting but terrible plot",negative,positive,mixed_sentiment,Weighs positive words more than negative assessment
+"Not the worst movie I've seen",negative,positive,negation,Comparative negation confuses model
+"Cinematography stunning but story drags",negative,positive,mixed_sentiment,Visual praise outweighs narrative criticism
