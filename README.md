@@ -81,10 +81,6 @@ Predicted: Positive
 - pandas
 - matplotlib
 
-## License
-
-MIT License
-
 ## Contact
 
 Gulusan Erdogan-Ozgul
