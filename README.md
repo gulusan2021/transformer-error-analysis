@@ -22,10 +22,10 @@ IMDB Movie Reviews
 
 ## Project Structure
 
+```
 transformer-error-analysis/
 ├── README.md
 ├── requirements.txt
-├── LICENSE
 ├── data/
 │   └── sample_errors.csv
 ├── src/
@@ -33,15 +33,19 @@ transformer-error-analysis/
 │   └── error_analysis.py
 └── notebooks/
     └── error_analysis.ipynb
+```
 
 ## Installation
 
+```bash
 git clone https://github.com/gulusan2021/transformer-error-analysis.git
 cd transformer-error-analysis
 pip install -r requirements.txt
+```
 
 ## Quick Start
 
+```python
 from src.data_processing import load_data
 from src.error_analysis import analyze_errors
 
@@ -51,26 +55,41 @@ train_data, test_data = load_data()
 # Analyze errors
 results = analyze_errors(test_data)
 print(results)
+```
 
 ## Results
 
-Error Distribution:
-- Negation: 634 errors (27.3%)
-- Mixed Sentiment: 451 errors (19.4%)
-- Sarcasm: 274 errors (11.8%)
-- Domain-Specific: 365 errors (15.7%)
+### Error Distribution
 
-Example Errors:
+| Category | Errors | Percentage |
+|----------|--------|------------|
+| Negation | 634 | 27.3% |
+| Mixed Sentiment | 451 | 19.4% |
+| Sarcasm | 274 | 11.8% |
+| Domain-Specific | 365 | 15.7% |
 
-Negation mishandling:
+### Example Errors
+
+**Negation mishandling:**
+```
 Review: "This film is not without its flaws, but overall excellent."
 True Label: Positive
-Predicted: Negative
+Predicted: Negative (model focuses on "not" and "flaws")
+```
 
-Sarcasm:
+**Sarcasm:**
+```
 Review: "Oh wonderful, another masterpiece. Just what we needed."
 True Label: Negative
-Predicted: Positive
+Predicted: Positive (misses sarcastic tone)
+```
+
+**Mixed Sentiment:**
+```
+Review: "Great acting but terrible plot."
+True Label: Negative
+Predicted: Positive (weighs positive words too heavily)
+```
 
 ## Requirements
 
@@ -81,8 +100,23 @@ Predicted: Positive
 - pandas
 - matplotlib
 
+See `requirements.txt` for complete list.
+
+## Future Work
+
+- Expand linguistic categories (metaphor, irony)
+- Compare multiple model architectures (BERT, RoBERTa)
+- Develop targeted data augmentation strategies
+- Test on additional domains (news, social media)
+
+
 ## Contact
 
-Gulusan Erdogan-Ozgul
-Email: e.gulusan@gmail.com
-Website: https://gulusan2021.github.io/gulusan-website/
+**Gulusan Erdoğan-Ozgul**
+- Email: e.gulusan@gmail.com
+- Website: https://gulusan2021.github.io/gulusan-website/
+- LinkedIn: [gulusan-erdogan-ozgul](https://www.linkedin.com/in/gulusan-erdogan-ozgul-m-b-a-52479b65)
+
+---
+
+*Part of a research portfolio in data-centric machine learning and model diagnostics.*
